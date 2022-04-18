@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../bootstrap-5.1.3/dist/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="./../fontawesome-free-5.15.4-web/css/all.css"
+    />
+    <style>
+      .container_100 {
+        width: 90%;
+      }
+      .nav-item a {
+        font-size: 1rem;
+        margin: 6px 0;
+      }
+      ul,
+      li {
+        list-style: none;
+        /* flex-wrap: nowrap; */
+        margin-bottom: 0;
+      }
+      .topAdd {
+        width: 100%;
+      }
+      .tip {
+        writing-mode: vertical-lr;
+      }
+      .notA {
+        text-decoration: none;
+        color: black;
+        margin: 0;
+      }
+      .logoAdd,
+      .addR,
+      .addLi {
+        width: 100%;
+      }
+      .rightS {
+        padding-left: 2px;
+      }
+      .menuLis > li > h3 {
+        font-size: 1rem;
+        margin: 0;
+      }
+      .menuLis > li {
+        /* background-color: #ccc; */
+        padding: 8px;
+      }
+      .menu {
+        border: 3px solid #bbb;
+        border-bottom: 5px solid #bbb;
+        border-top: 0;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        width: 100%;
+      }
+      .menu_topHight {
+        border-top: 5px solid #78b620;
+      }
+      .menu_unHight {
+        background-color: #eee;
+        border-top: 5px solid #bbb;
+      }
+      .menu_Btn {
+        text-align: center;
+        box-sizing: border-box;
+        /* line-height: 1rem; */
+      }
+      .menu_select {
+        font-size: 0.9rem;
+      }
+      .menu_Btn_L {
+        border-right: 2.5px solid #bbb;
+      }
+      .menu_all {
+        background-color: #ddd;
+        margin-bottom: 0;
+      }
+      .addP {
+        font-size: 1rem;
+      }
+      .menu_arrow {
+        font-size: 0.8rem;
+        color: black;
+      }
+      .seaTxt,
+      .seaSel,
+      .seaBtn {
+        border-radius: 0;
+        border: 0;
+        height: 40px;
+      }
+      .seaTxt {
+        width: 380px;
+      }
+      .seaSel {
+        width: 130px;
+      }
+      .search_text {
+        border-right: 1px solid #78b620;
+      }
+      .seaBtn {
+        background-color: #78b620;
+        color: white;
+      }
+      .input_group {
+        border: 3.5px solid #78b620;
+      }
+      .hotTxt {
+        color: #78b620;
+      }
+      .hotLi {
+        line-height: 46px;
+      }
+      .search_groupR {
+        background-color: #eee;
+        box-sizing: border-box;
+        padding: 11px;
+      }
+      .box,
+      .silder {
+        width: 100%;
+      }
+      .silder img {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container container_100">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav m-0">
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2 active" aria-current="page" href="#"
+                  >博客來</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" href="#">售票網</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" href="#">企業採購</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" href="#">福利平台</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" href="#">海外專館</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+            </ul>
+          </div>
+          <!-- collapse DIV LEFT-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >結帳</a
+                >
+              </li>
+              <li class="nav-item d-flex flex-row">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >鑽石會員</a
+                >
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#">
+                  您好 (登出)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >購物金</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >會員專區</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >電子書櫃</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >線上客服</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0 pe-2" aria-current="page" href="#"
+                  >繁體</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- collapse DIV RIGHT-->
+        </div>
+        <!-- container-fluid -->
+      </nav>
+      <div class="headers">
+        <div class="col-12">
+          <a href=""
+            ><img class="topAdd" src="./books/67_950x40.jpg" alt=""
+          /></a>
+        </div>
+        <div class="col-12 mt-1">
+          <a href=""
+            ><img class="topAdd" src="./books/0129newsp_95070.jpg" alt=""
+          /></a>
+        </div>
+        <div class="col-12 d-flex justify-content-between mt-1 mb-0">
+          <a class="col-7" href=""
+            ><img class="logoAdd" src="./books/0129_3C_header.jpg" alt=""
+          /></a>
+          <ul class="d-flex col-5 justify-content-end list-unstyled mb-2">
+            <li class="col-6">
+              <a href=""
+                ><img class="addR" src="./books/add_act_29th_190x65.gif" alt=""
+              /></a>
+            </li>
+            <li class="col-6">
+              <a href=""
+                ><img class="addR" src="./books/04_190x65.jpg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex justify-content-between col-12 align-items-center">
+          <div class="col-6">
+            <p class="mb-0 addP">
+              2022博客來春節過年不打烊，各項服務說明
+              <span><a href="">詳情</a></span>
+            </p>
+          </div>
+          <div class="col-6">
+            <ul class="d-flex list-unstyled mb-0">
+              <li class="col-2 rightS">
+                <a href="#"
+                  ><img class="addR" src="./books/gbt01.jpg" alt=""
+                /></a>
+              </li>
+              <li class="col-2 rightS">
+                <a href=""
+                  ><img class="addR" src="/books/getImage_07_1.jpg" alt=""
+                /></a>
+              </li>
+              <li class="col-2 rightS">
+                <a href=""
+                  ><img class="addR" src="./books/getImage_08.jpg" alt=""
+                /></a>
+              </li>
+              <li class="col-2 rightS">
+                <a href=""
+                  ><img class="addR" src="./books/getImage_04.jpg" alt=""
+                /></a>
+              </li>
+              <li class="col-2 rightS">
+                <a href=""
+                  ><img class="addR" src="./books/getImage_05.jpg" alt=""
+                /></a>
+              </li>
+              <li class="col-2 rightS">
+                <a href=""
+                  ><img class="addR" src="./books/getImage_06.jpg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="searchBar d-flex">
+        <div class="search_group col-12 d-flex flex-wrap">
+          <div class="aside_left col-2 d-flex">
+            <!-- <strong class="tip">移動滑鼠展開全站分類</strong> -->
+            <div class="menu">
+              <div class="menu_nav">
+                <ul class="d-flex list-unstyled justify-content-between mb-0">
+                  <li class="menu_Btn menu_Btn_L p-2 flex-grow-1 menu_topHight">
+                    <a class="notA menu_select" href="">全站分類</a>
+                    <br />
+                    <a href=""
+                      ><i
+                        class="fas fa-chevron-down menu_arrow visually-hidden"
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="menu_Btn menu_Btn_R p-2 flex-grow-1 menu_unHight">
+                    <a class="notA menu_select" href="">旗艦店</a>
+                    <br />
+                    <a href=""
+                      ><i class="fas fa-chevron-down menu_arrow"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_nav">
+                <ul class="menuLis list-unstyled">
+                  <li>
+                    <h3>
+                      <a class="notA" href="">電子書</a> ‧
+                      <a class="notA" href="">有聲書</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">中文書</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">簡體書</a> ‧
+                      <a class="notA" href="">外文書</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">雜誌</a> ‧
+                      <a class="notA" href="">MOOK</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">CD</a> ‧
+                      <a class="notA" href="">DVD</a> ‧
+                      <a class="notA" href="">售票</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">保養</a> ‧
+                      <a class="notA" href="">洗沐</a> ‧
+                      <a class="notA" href="">醫美</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">日用品</a> ‧
+                      <a class="notA" href="">婦幼玩具</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">服飾</a> ‧
+                      <a class="notA" href="">機能服</a> ‧
+                      <a class="notA" href="">內衣</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">鞋</a> ‧
+                      <a class="notA" href="">包包飾品</a> ‧
+                      <a class="notA" href="">精品</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">美食</a> ‧
+                      <a class="notA" href="">飲品</a> ‧
+                      <a class="notA" href="">食材</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">保健</a> ‧
+                      <a class="notA" href="">纖體</a> ‧
+                      <a class="notA" href="">醫材</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">文具</a> ‧
+                      <a class="notA" href="">動漫</a> ‧
+                      <a class="notA" href="">公仔</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">餐廚生活</a> ‧
+                      <a class="notA" href="">家居雜貨</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">休閒生活</a> ‧
+                      <a class="notA" href="">寵物生活</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">3C</a> ‧
+                      <a class="notA" href="">家電</a>
+                    </h3>
+                  </li>
+                  <li>
+                    <h3>
+                      <a class="notA" href="">票證</a> ‧
+                      <a class="notA" href="">沖印</a> ‧
+                      <a class="notA" href="">售票</a>
+                    </h3>
+                  </li>
+                </ul>
+                <ul class="menuLis list-unstyled menu_all">
+                  <li>
+                    <h3>
+                      <a class="notA" href="">看全部商品分類</a>
+                    </h3>
+                  </li>
+                </ul>
+              </div>
+              <!-- <div class="menu_nav">
+    
+                        </div> -->
+            </div>
+          </div>
+          <div class="d-flex col-10 flex-wrap">
+            <div class="box">
+              <div class="search_group search_groupR d-flex">
+                <div class="input_group d-flex me-3">
+                  <div class="search_text">
+                    <input class="seaTxt" type="text" />
+                  </div>
+                  <div class="search_select">
+                    <input class="seaSel" type="text" />
+                  </div>
+                  <button class="seaBtn">search</button>
+                </div>
+                <ul class="d-flex list-unstyled">
+                  <li class="hotTxt hotLi me-1">HOT</li>
+                  <li class="me-2 hotLi">
+                    <a class="notA hotTxt" href="">電子書66元</a>
+                  </li>
+                  <li class="me-2 hotLi">
+                    <a class="notA hotTxt" href="">人生改造術</a>
+                  </li>
+                  <li class="me-2 hotLi">
+                    <a class="notA hotTxt" href="">野櫻梅飲超值加購</a>
+                  </li>
+                  <li class="me-2 hotLi">
+                    <a class="notA hotTxt" href="">乾洗手新品</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="banner col-10">
+              <div class="aside_right">
+                <div class="silder">
+                  <img src="./books/0126hnyfood_590.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- searchBar -->
+    </div>
+  </body>
+</html>
