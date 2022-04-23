@@ -1,0 +1,156 @@
+.container_100 {
+  width: 65%;
+}
+
+.nav-item a {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+ul,
+li {
+  list-style: none;
+  /* flex-wrap: nowrap; */
+  margin-bottom: 0;
+}
+
+.topAdd {
+  width: 100%;
+}
+
+.tip {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.notA {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+
+.logoAdd,
+.addR,
+.addLi {
+  width: 100%;
+}
+
+.rightS {
+  padding-left: 2px;
+}
+
+.menuLis > li > h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.menuLis > li {
+  /* background-color: #ccc; */
+  padding: 8px;
+}
+
+.menu {
+  border: 3px solid #bbb;
+  border-bottom: 5px solid #bbb;
+  border-top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.menu_topHight {
+  border-top: 5px solid #78b620;
+}
+
+.menu_unHight {
+  background-color: #eee;
+  border-top: 5px solid #bbb;
+}
+
+.menu_Btn {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* line-height: 1rem; */
+}
+
+.menu_select {
+  font-size: 0.9rem;
+}
+
+.menu_Btn_L {
+  border-right: 2.5px solid #bbb;
+}
+
+.menu_all {
+  background-color: #ddd;
+  margin-bottom: 0;
+}
+
+.addP {
+  font-size: 1rem;
+}
+
+.menu_arrow {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.seaTxt,
+.seaSel,
+.seaBtn {
+  border-radius: 0;
+  border: 0;
+  height: 40px;
+}
+
+.seaTxt {
+  width: 380px;
+}
+
+.seaSel {
+  width: 130px;
+}
+
+.search_text {
+  border-right: 1px solid #78b620;
+}
+
+.seaBtn {
+  background-color: #78b620;
+  color: white;
+}
+
+.input_group {
+  border: 3.5px solid #78b620;
+}
+
+.hotTxt {
+  color: #78b620;
+}
+
+.hotLi {
+  line-height: 46px;
+}
+
+.search_groupR {
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 11px;
+}
+
+.box,
+.silder {
+  width: 100%;
+}
+
+.silder img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+}
+/*# sourceMappingURL=style.css.map */
