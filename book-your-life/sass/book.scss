@@ -1,27 +1,26 @@
 .container_100 {
-    width: 60%;
+    width: 100%;
+    ul,
+    li {
+        list-style: none;
+        /* flex-wrap: nowrap; */
+        margin-bottom: 0;
+        .nav-item a {
+            font-size: 1rem;
+            margin: 6px 0;
+        }
+    }
 }
-.nav-item a {
-    font-size: 1rem;
-    margin: 6px 0;
-}
-ul,
-li {
-    list-style: none;
-    /* flex-wrap: nowrap; */
-    margin-bottom: 0;
-}
+
 .topAdd {
     width: 100%;
 }
-.tip {
-    writing-mode: vertical-lr;
-}
-.notA {
-    text-decoration: none;
-    color: black;
-    margin: 0;
-}
+
+// .tip {
+//     writing-mode: vertical-lr;
+// }
+// 移動滑鼠展開全站分類
+
 .logoAdd,
 .addR,
 .addLi {
@@ -30,13 +29,21 @@ li {
 .rightS {
     padding-left: 2px;
 }
-.menuLis > li > h3 {
-    font-size: 1rem;
-    margin: 0;
-}
-.menuLis > li {
-    /* background-color: #ccc; */
-    padding: 8px;
+.menuLis {
+    li {
+        /* background-color: #ccc; */
+        padding: 8px;
+        h3 {
+            font-size: 1rem;
+            margin: 0;
+            a,
+            .notA {
+                text-decoration: none;
+                color: black;
+                margin: 0;
+            }
+        }
+    }
 }
 .menu {
     border: 3px solid #bbb;

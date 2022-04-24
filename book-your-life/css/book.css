@@ -1,33 +1,22 @@
 .container_100 {
-  width: 60%;
+  width: 100%;
 }
 
-.nav-item a {
-  font-size: 1rem;
-  margin: 6px 0;
-}
-
-ul,
-li {
+.container_100 ul,
+.container_100 li {
   list-style: none;
   /* flex-wrap: nowrap; */
   margin-bottom: 0;
 }
 
+.container_100 ul .nav-item a,
+.container_100 li .nav-item a {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
 .topAdd {
   width: 100%;
-}
-
-.tip {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-}
-
-.notA {
-  text-decoration: none;
-  color: black;
-  margin: 0;
 }
 
 .logoAdd,
@@ -40,14 +29,21 @@ li {
   padding-left: 2px;
 }
 
-.menuLis > li > h3 {
+.menuLis li {
+  /* background-color: #ccc; */
+  padding: 8px;
+}
+
+.menuLis li h3 {
   font-size: 1rem;
   margin: 0;
 }
 
-.menuLis > li {
-  /* background-color: #ccc; */
-  padding: 8px;
+.menuLis li h3 a,
+.menuLis li h3 .notA {
+  text-decoration: none;
+  color: black;
+  margin: 0;
 }
 
 .menu {
