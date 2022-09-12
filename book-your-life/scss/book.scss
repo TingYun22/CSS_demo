@@ -310,7 +310,28 @@
                 padding-left: calc(#{$leftMenuWidth} + #{$gap});
 
                 .sale{
-                    width: 100%;
+                    // width: 100%;
+                    // height: 100%;
+                    position: relative;
+                    .arrow{
+                        position: absolute;
+                        top:50%;
+                        user-select: none;
+                        cursor: pointer;
+                        width: 40px;
+                        height: 35px;
+                        background-color: $gray100Color;
+                        opacity: .6;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:hover{
+                            opacity: .85;
+                        }
+                    }
+                    .arrowRight{
+                        right: 0;
+                    }
                     img{
                         object-fit: contain;
                         height:  100%;
@@ -322,11 +343,17 @@
                     padding: $gap 0;
                     justify-content: center;
                     div{
-                        width: $gap*2;
-                        height: $gap*2;
+                        width: $gap*2.5;
+                        height: $gap*2.5;
                         border-radius: 50%;
-                        background-color: $gray200Color;
+                        background-color: $gray50Color;
                         margin:  0 calc($gap/2);
+                        text-align: center;
+                        line-height: $gap*2.5;
+                        color: $whiteColor;
+                    }
+                    .active{
+                        background-color: $gray200Color;
                     }
                 }
             }
