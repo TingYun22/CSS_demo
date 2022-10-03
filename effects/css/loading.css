@@ -1,0 +1,82 @@
+@keyframes rotateDegree {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaleDouble {
+  100% {
+    transform: scale(2);
+  }
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  display: flex;
+}
+.circle .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid skyblue;
+  border-radius: 50%;
+  border-top: 5px solid white;
+  animation-name: rotateDegree;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+  margin: 10px;
+}
+.circle .spinner_dotLoading {
+  position: relative;
+  margin: 10px;
+}
+.circle .spinner_dotLoading_dot, .circle .spinner_dotLoading_mask {
+  width: 50px;
+  height: 50px;
+  border: 5px solid skyblue;
+  border-radius: 50%;
+}
+.circle .spinner_dotLoading_dot {
+  border: 5px dotted orange;
+  animation-name: rotateDegree;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.circle .spinner_dotLoading_mask {
+  border-color: white transparent transparent;
+  animation-name: rotateDegree;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 0.8s;
+}
+
+.pointLoading {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  margin: 10px;
+}
+.pointLoading > div {
+  border: 5px solid black;
+  border-radius: 50%;
+}
+.pointLoading > :nth-child(1) {
+  animation: scaleDouble 0.6s ease-in-out alternate 0.2s infinite;
+}
+.pointLoading > :nth-child(2) {
+  animation: scaleDouble 0.6s ease-in-out alternate 0.4s infinite;
+}
+.pointLoading > :nth-child(3) {
+  animation: scaleDouble 0.6s ease-in-out alternate 0.6s infinite;
+}
+
+/*# sourceMappingURL=loading.css.map */
