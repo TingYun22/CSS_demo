@@ -1,6 +1,12 @@
+@import './../../book-your-life/scss/style.scss';
+
+
 $circleSize: 50px;
 $borderWidth: 5px;
 $gap10:10px;
+$monsterColor:#377af5;
+$lightGrayColor:gainsboro;
+
 
 @mixin circleRule {
     width: $circleSize;
@@ -18,14 +24,78 @@ $gap10:10px;
 }
 @keyframes scaleDouble {
     100% {
-        transform: scale(2);
+        transform: scale(1.3);
     }
 }
+@keyframes monsterMove {
+    0%{
+        transform: translate(calc(0 - #{$circleSize}),60%) rotate(-45deg);
+    }
+    25%{
+        transform: translate(50px,60%) rotate(-45deg);
+       
+    }
+    50%{
+
+        transform:   translate(100px,60%) rotate(-45deg);
+    }
+    75%{
+        transform: translate(150px,60%) rotate(-45deg);
+    }
+    100%{
+        transform:   translate(200px,60%) rotate(-45deg);
+    }
+}
+@keyframes foodDisappear {
+    100%{
+        background-color: $lightGrayColor;
+    }
+}
+@keyframes shiny{
+    0%
+    {
+        transform: scale(.2);
+    }
+    10%
+    {
+        transform: scale(1);
+    }
+    50%,100%
+    {
+        transform: scale(.2);
+    }
+}
+@keyframes pause{
+    0%,100%{
+        color: $gray800Color;
+    }50%{
+        color: $gray400Color;
+    }
+}
+
+@keyframes changeColor {
+    0%
+    {
+      filter: hue-rotate(45deg);
+    }
+    100%
+    {
+      filter: hue-rotate(240deg);
+    }
+}
+
 
 body{
     margin: 0 ;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.divideDiv{
+    height: 100vh;
+    display: flex;
     align-items: center;
 }
 
@@ -33,16 +103,16 @@ body{
     display: flex;
     .spinner {
         @include circleRule();
-        border-top: $borderWidth solid white;
+        border-top: $borderWidth solid rgb(201, 238, 253);
         animation-name: rotateDegree;
         -webkit-animation-timing-function: linear;
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-duration: 1s;
-        margin:  $gap10;
+        // margin:  $gap10;
 
         &_dotLoading {
             position: relative;
-            margin:  $gap10;
+            // margin:$gap10;
 
             &_dot,&_mask{
                 @include circleRule();
@@ -58,7 +128,7 @@ body{
             }
             
             &_mask{
-                border-color: white transparent transparent;
+                border-color: rgba(255, 255, 255, 0.9) transparent transparent;
                 animation-name: rotateDegree;
                 -webkit-animation-timing-function: linear;
                 -webkit-animation-iteration-count: infinite;
@@ -69,13 +139,11 @@ body{
     }
 }
 
-
 .pointLoading {
     display: flex;
     width: calc($borderWidth) * 20;
     justify-content: space-around;
-    margin: $gap10;
-
+    // margin: $gap10;
     >div{
         border: $borderWidth solid black;
         border-radius: 50%;
@@ -91,3 +159,35 @@ body{
     }
 }
 
+.moreDotsLoading{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 60px;
+    animation: changeColor s linear infinite;
+    // margin: $gap10;
+
+    .dotGroup{
+        display: flex;
+        justify-content: space-around;
+        &:last-child .dot {
+            animation-delay: calc(-0.1s * var(--i));
+        }
+        .dot{
+            width: calc($circleSize/3);
+            height: calc($circleSize/3);
+            transform: scale(.2);
+            border-radius: 50%;
+            background-color: rgb(251, 230, 90);
+            box-shadow: 0 0 10px rgb(233, 218, 120), 0 0 20px rgb(233, 218, 120),0 0 40px rgb(233, 218, 120),0 0 60px rgb(233, 218, 120),0 0 80px rgb(233, 218, 120),0 0 100px rgb(233, 218, 120);
+            animation: shiny .6s linear calc(0.1s * var(--i)) infinite;
+        }
+    }
+    h2{
+        text-align: center;
+        font-size: $word16;
+        color: $gray800Color;
+        animation: pause ease-in-out .6s infinite ;
+    }
+}
